@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--<withJansi>true</withJansi>-->
+        <encoder>
+            <Pattern>%-35(%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %thread) - %logger{10}: %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <root level="error">
+        <appender-ref ref="console" />
+    </root>
+    <logger name="com.wellknown.xiaozhuang" level="debug"/>
+    <logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug"/>
+</configuration>
